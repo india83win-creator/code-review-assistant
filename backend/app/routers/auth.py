@@ -15,8 +15,8 @@ router = APIRouter()
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 security = HTTPBearer()
 
-SECRET_KEY = os.getenv("SECRET_KEY")
-ALGORITHM = os.getenv("ALGORITHM")
+SECRET_KEY = os.getenv("SECRET_KEY","my-super-secret-key-change-in-production")
+ALGORITHM = os.getenv("ALGORITHM","HS256")
 
 class RegisterRequest(BaseModel):
     email: str
