@@ -206,7 +206,7 @@ OPENAI_API_KEY=your_openai_api_key
 uvicorn main:app --reload --port 8000
 ```
 
-API docs auto-generated at → **`http://localhost:8000/docs`**
+API docs auto-generated at → **`https://code-review-assistant-api-i4ws.onrender.com/docs`**
 
 ---
 
@@ -224,7 +224,7 @@ npm install
 
 ```env
 # frontend/.env.local
-NEXT_PUBLIC_API_URL=http://localhost:8000
+NEXT_PUBLIC_API_URL=https://code-review-assistant-api-i4ws.onrender.com
 ```
 
 ```bash
@@ -274,7 +274,7 @@ code-review-assistant/
 
 ## 🔌 REST API Reference
 
-Swagger UI: `http://localhost:8000/docs`
+Swagger UI: `https://code-review-assistant-api-i4ws.onrender.com/docs`
 
 | Namespace | Description |
 |---|---|

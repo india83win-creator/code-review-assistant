@@ -39,7 +39,7 @@ export default function ReviewsPage() {
       .catch((err) => console.error(err))
 
     axios
-      .get('http://localhost:8000/api/projects/', {
+      .get('https://code-review-assistant-api-i4ws.onrender.com/api/projects/', {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setProjects(res.data))

@@ -80,7 +80,7 @@ No external state library is used. State is managed at the component level using
 
 ### API Communication
 
-All API calls are made with Axios to `http://localhost:8000/api`. The JWT token is retrieved from `localStorage` and attached as `Authorization: Bearer <token>` on every request. AI provider settings (base URL, API key, model name) are read from the user profile and included in review and chat request bodies, keeping the backend stateless with respect to provider configuration.
+All API calls are made with Axios to `https://code-review-assistant-api-i4ws.onrender.com/api`. The JWT token is retrieved from `localStorage` and attached as `Authorization: Bearer <token>` on every request. AI provider settings (base URL, API key, model name) are read from the user profile and included in review and chat request bodies, keeping the backend stateless with respect to provider configuration.
 
 ### Key Design Decisions
 
