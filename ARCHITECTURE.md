@@ -74,6 +74,7 @@ flowchart LR
   API --> AI[AI Provider (OpenAI-compatible via base_url)]
 ```
 
+
 > Note: AI Provider is contacted by the backend during **/api/reviews/** and **/api/chat/** requests.
 
 ---
@@ -300,6 +301,7 @@ erDiagram
   }
 ```
 
+
 ### Data Flow (DB)
 - Upload → insert/update `files` rows.
 - Create review → read `projects` + `files`, call AI, parse JSON, insert `reviews`.
@@ -328,6 +330,7 @@ sequenceDiagram
   BE->>DB: Fetch user by sub
   BE-->>FE: user payload + ai_settings
 ```
+
 
 ### Registration
 - `POST /api/auth/register`
@@ -381,6 +384,7 @@ flowchart TD
   J --> K[Persist Review row (summary, issues, recommendations)]
   K --> L[Return review JSON to client]
 ```
+
 
 ### File processing
 - When `file_id` is provided, backend uses that single file.
@@ -471,6 +475,7 @@ flowchart LR
   Render --> Supabase[(Supabase/PostgreSQL)]
   Render --> AI[AI Provider (Ollama/OpenAI-compatible)]
 ```
+
 
 ### Environment Variables (from code)
 Backend:
