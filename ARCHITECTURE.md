@@ -1,4 +1,4 @@
-# ARCHITECTURE_V2.md
+# ARCHITECTURE.md
 
 ## Project Overview
 
@@ -69,9 +69,9 @@ A full-stack “Code Review Assistant” web application that lets users:
 
 ```mermaid
 flowchart LR
-  UI[Frontend (Next.js)] --> API[Backend (FastAPI /api/*)]
-  API --> DB[(Database: PostgreSQL)]
-  API --> AI[AI Provider (OpenAI-compatible via base_url)]
+  UI["Frontend: Next.js"] --> API["Backend: FastAPI /api/*"]
+  API --> DB[("Database: PostgreSQL")]
+  API --> AI["AI Provider: OpenAI-compatible via base_url"]
 ```
 
 
@@ -470,10 +470,10 @@ Discovered endpoints (method, route, purpose, auth):
 
 ```mermaid
 flowchart LR
-  U[Users] --> Vercel[Frontend: Next.js on Vercel]
-  Vercel --> Render[Backend: FastAPI on Render]
-  Render --> Supabase[(Supabase/PostgreSQL)]
-  Render --> AI[AI Provider (Ollama/OpenAI-compatible)]
+  U[Users] --> Vercel["Frontend: Next.js on Vercel"]
+  Vercel --> Render["Backend: FastAPI on Render"]
+  Render --> Supabase[("Supabase/PostgreSQL")]
+  Render --> AI["AI Provider: Ollama/OpenAI-compatible"]
 ```
 
 
