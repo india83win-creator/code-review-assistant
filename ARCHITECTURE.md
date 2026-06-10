@@ -381,7 +381,7 @@ flowchart TD
   G --> H[Receive response.content]
   H --> I[Strip markdown code fences if any]
   I --> J["json.loads parsed string"]
-  J --> K[Persist Review row (summary, issues, recommendations)]
+  J --> K["Persist Review row: summary, issues, recommendations"]
   K --> L[Return review JSON to client]
 ```
 
