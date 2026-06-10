@@ -292,7 +292,7 @@ erDiagram
   REVIEWS {
     int id PK
     int project_id FK
-    int file_id FK nullable
+    int file_id FK
     string review_type
     text summary
     json issues
@@ -380,7 +380,7 @@ flowchart TD
   F --> G[Send chat.completions.create with system + user prompt]
   G --> H[Receive response.content]
   H --> I[Strip markdown code fences if any]
-  I --> J[json.loads(parsed string)]
+  I --> J["json.loads parsed string"]
   J --> K[Persist Review row (summary, issues, recommendations)]
   K --> L[Return review JSON to client]
 ```
